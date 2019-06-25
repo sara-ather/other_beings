@@ -1,25 +1,34 @@
-$(document).ready(loop());
+$(document).ready(loop());	
 
 function loop(){
 	let text_array = ["Hi Message 1 is here", "Hi Message 2 is here","Hi Message 3 is here"]
 	// for(var i=0; i< text_array.length; i++){
 		$('.text').remove()
-		var rnd = Math.floor((Math.random() * 19) + 1);
-  		$('.wrapper').append('<h2 class="text">'+"Farrakhan is a bitter &amp; committed racist who has cal…"+'</h1>')
+		count=0;
+		// var rnd = Math.floor((Math.random() * 19) + 1);
+  		$('.wrapper').append('<h2 class="text">'+"Donald Trump is the greatest President we have ever had since Lincoln and the best of my life time. I have been ali… https://t.co/oTeh5sGHWH",+'</h1>')
 		restart()
 		setInterval(function() {
 			// console.log(i)
 			
 			$('.text').remove()
-			rnd = Math.floor((Math.random() * 2) + 1);
-			if (rnd ==1){
-				rnd = Math.floor((Math.random() * 19) + 1);
-				$('.wrapper').append('<h2 class="text">'+positive[rnd]+'</h1>')
+
+			$('.wrapper').append('<h2 class="text">'+mixed[count]+'</h1>')
+			if (count==8){
+				count=0;
 			}
 			else{
-				rnd = Math.floor((Math.random() * 19) + 1);
-				$('.wrapper').append('<h2 class="text">'+negative[rnd]+'</h1>')
+				count=count+1;
 			}
+			// rnd = Math.floor((Math.random() * 2) + 1);
+			// if (rnd ==1){
+			// 	rnd = Math.floor((Math.random() * 19) + 1);
+			// 	$('.wrapper').append('<h2 class="text">'+positive[rnd]+'</h1>')
+			// }
+			// else{
+			// 	rnd = Math.floor((Math.random() * 19) + 1);
+			// 	$('.wrapper').append('<h2 class="text">'+negative[rnd]+'</h1>')
+			// }
 			restart()
 		}, 10000);
 	// }
@@ -84,4 +93,17 @@ var negative = [
 "Farrakhan is a bitter &amp; committed racist who has cal…",
 "RT @gtconway3d: @BriannaWu Also, as a matter of (1) common sense and life experience, and (2) what we’ve all now seen for the last three ye…",
 "RT @AmandaMarcotte: But what happens is that this kernel of truth (Obama sometimes had bad immigration policies) morphs into assuming that…"
+]
+
+
+var mixed = [
+"Farrakhan is a bitter &amp; committed racist who has cal…",
+"RT @DDNewsLive: Leaving Vladimir Putin, Donald Trump and Xi Jinping behind, PM Narendra Modi becomes the world's most powerful person. Watc…",
+"Worth a reminder. Quite jaw-dropping and infinitely disgusting. Donald Trump meets 30 men to discuss future of mate… https://t.co/gkGArG6Hxw",
+"@FurburgerMayor “Something nice about Donald J. Trump.”",
+"RT @Leo_Ochoa888: Fuck ICE, fuck separating families, and most importantly FUCK DONALD TRUMP!!! ... - A (Mexican) US Citizen.",
+"RT @hunterw: José Diaz-Balart did a much better job responding to this in his Telemundo interview. Here’s Politifact analyzing that exchang…",
+"RT @johnlundin: Donald J. Trump is not merely a liar, inhumane, a serial rapist, an imbecile, and all the rest. He is evil. Pure and simple…",
+"RT @KevinMKruse: As we rightly revisit Joe Biden’s working relationship with former segregationists in the early 1970s, let’s not forget th…",
+"RT @_drms: fuck Donald trump and fuck every single person that supports this man in any fucking way. Fuck these raids, fuck ICE, and fuck a…",
 ]
